@@ -35,7 +35,7 @@ var app = new Vue({
       let vm = this;
       let file = event.target.files[0];
       if(file != null){
-        visAlert(vm,'Раздача началась!',"suc");
+        visAlert(vm,'The distribution began!',"suc");
         client.seed(file, function (torrent) {
           vm.fileNameUp = file.name;
           vm.fileNameTDown = `${file.name}.torrent`;
@@ -45,13 +45,13 @@ var app = new Vue({
           vm.UpVis = true;
         })
       }else{
-        visAlert(vm,'Файл не обнаружен!',"war");
+        visAlert(vm,'File not found',"war");
       }
     },
     download:function() {
       let vm = this;
       if((this.magnetUrlDown != null) && this.magnetUrlDown.length > 0){
-        visAlert(vm,'Загрузка началась!',"suc");
+          visAlert(vm,'Download has started!',"suc");
         client.add(this.magnetUrlDown, function(torrent) {
           vm.hashDown = `Hash:${torrent.infoHash}`;
           var file = torrent.files[0];
@@ -60,11 +60,11 @@ var app = new Vue({
             if (err) throw err
             vm.fileUrlDown = url;
             vm.DownVis = true;
-            visAlert(vm,'Загрузка завершена!',"suc");
+            visAlert(vm,'Loading is complete!',"suc");
           })
         })
       }else{
-        visAlert(vm,'Добавьте magnet ссылку',"war");
+        visAlert(vm,'Add a magnet link',"war");
       }
     },
   },
