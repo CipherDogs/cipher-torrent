@@ -1,0 +1,39 @@
+body{
+  margin: 0;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-size: 3vh;
+}
+a,a:visited,a:active,a:hover{
+	text-decoration:none;
+	color:black;
+}
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+.header, .footer, .block{
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.block{
+  margin-top: 10px;
+  overflow: hidden;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+}
+.footer img{
+  width: 36px;
+  height: 36px;
+}
+.alert{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#file-upload{
+  display: none;
+}
+#main{
+  margin: 10px;
+}
