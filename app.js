@@ -69,8 +69,7 @@ var app = new Vue({
     },
   },
 })
-function updateSpeed() {
-    app.downSpeed = client.downloadSpeed;
-    app.upSpeed = client.uploadSpeed;
-}
-setInterval('updateSpeed()',1000);
+setInterval(function() {
+  app.downSpeed = client.downloadSpeed;
+  app.upSpeed = client.uploadSpeed;
+},1000);
