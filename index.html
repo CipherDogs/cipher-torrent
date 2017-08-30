@@ -4,44 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="style.css">
   <title>lofiTorrent - Browser torrent client</title>
 </head>
 <body>
-  <div class="row header">
-    <div class="col-md-6 col-xs-12">
+  <div class="header">
+    <div class="left">
       <a href="index.html">
         <h1><i class="ion-ios-infinite-outline"></i>&nbsp;lofiTorrent</h1>
       </a>
     </div>
-    <div class="col-md-6 col-xs-12 text-center desc">
+    <div class="right">
       Online and offline browser torrent client
     </div>
   </div>
   <div id="main">
-    <div class="row">
-      <div class="col-md-4 col-xs-3">
+    <div id="preloaders" v-if="loader">
+      <img src="preloader.gif">
+    </div>
+    <div class="panel" v-show="main" style="display: none;">
+      <div class="left">
         <input id="file-upload" type="file" @change="upload($event)">
-        <label class="btn btn-default" for="file-upload">Seed File</label>
+        <label class="btn" for="file-upload">Seed File</label>
       </div>
-      <div class="col-md-4 col-md-offset-4 col-xs-9">
+      <div class="right">
         <input class="ipt" type="text" placeholder="Magnet URL" v-model="magnetUrlDown">
-        <input class="btn btn-default " type="button" value="Download" @click="download">
+        <input class="btn" type="button" value="Download" @click="download">
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12 col-xs-12 text-center">
-        Statistics:
-        [Up&nbsp;<i class="ion-ios-arrow-thin-up"></i>{{upSpeed/1000}}&nbsp;kB/sec]&nbsp;[Down&nbsp;<i class="ion-ios-arrow-thin-down"></i>{{downSpeed/1000}}&nbsp;kB/sec]
-      </div>
+    <div class="speed" v-show="main" style="display: none;">
+      Statistics:
+      [Up&nbsp;<i class="ion-ios-arrow-thin-up"></i>{{upSpeed/1000}}&nbsp;kB/sec]&nbsp;[Down&nbsp;<i class="ion-ios-arrow-thin-down"></i>{{downSpeed/1000}}&nbsp;kB/sec]
     </div>
-    <div class="row">
-      <div class="col-md-5 col-xs-12">
-        <div class="panel panel-default block" v-if="UpVis">
-          <div class="panel-heading">Seeding</div>
-          <div class="panel-body">
+    <div class="blocks" v-show="main" style="display: none;">
+      <div class="block">
+        <div class="block-head">Seeding</div>
+        <div class="block-body">
+          <div v-if="UpVis">
             <p>File name:{{fileNameUp}}</p>
             <p>{{hashUp}}</p>
             <br>
@@ -50,10 +50,10 @@
           </div>
         </div>
       </div>
-      <div class="col-md-5 col-md-offset-2 col-xs-12">
-        <div class="panel panel-default block" v-if="DownVis">
-          <div class="panel-heading">Downloading</div>
-          <div class="panel-body">
+      <div class="block">
+        <div class="block-head">Downloading</div>
+        <div class="block-body" >
+          <div v-if="DownVis">
             <p>{{fileNameDown}}</p>
             <p>{{hashDown}}</p>
             <br>
@@ -62,16 +62,18 @@
         </div>
       </div>
     </div>
-    <div class="alert alert-success" role="alert" v-if="statusVisSuc">{{status}}</div>
-    <div class="alert alert-warning" role="alert" v-if="statusVisWar">{{status}}</div>
+    <div v-show="main" style="display: none;">
+      <div class="alert alert-success" role="alert" v-show="statusVisSuc">{{status}}</div>
+      <div class="alert alert-warning" role="alert" v-show="statusVisWar">{{status}}</div>
+    </div>
   </div>
-  <div class="row footer col-md-12 col-xs-12">
-    <div class="col-md-6 col-xs-6 text-center">
+  <div class="footer">
+    <div class="left">
       Open-Source project by
       <a href="https://github.com/deadblackclover" target="_blank"><i class="ion-social-github"></i>&nbsp;DEADBLACKCLOVER</a>
     </div>
-    <div class="col-md-6 col-xs-6 text-center">
-      Powered by
+    <div class="right">
+      Powered by<br>
       <a href="https://webtorrent.io/" target="_blank"><img src="https://webtorrent.io/img/webtorrent-small.png"></a>
       <a href="https://vuejs.org/" target="_blank"><img src="https://vuejs.org/images/logo.png"></a>
     </div>

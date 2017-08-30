@@ -1,4 +1,4 @@
-const client = new WebTorrent();
+let client = new WebTorrent();
 
 function visAlert(vm,stat,col) {
   vm.status = stat;
@@ -17,14 +17,15 @@ function visAlert(vm,stat,col) {
   }
 }
 
-var app = new Vue({
+let app = new Vue({
   el: '#main',
-  data: {
-    client : client,
+  data:{
+    main: true,
+    loader: false,
     status: '',
-    downSpeed:'',
-    upSpeed: '',
     magnetUrlDown: '',
+    downSpeed: '',
+    upSpeed: '',
     statusVisSuc: false,
     statusVisWar: false,
     UpVis: false,
@@ -51,7 +52,7 @@ var app = new Vue({
     download:function() {
       let vm = this;
       if((this.magnetUrlDown != null) && this.magnetUrlDown.length > 0){
-          visAlert(vm,'Download has started!',"suc");
+        visAlert(vm,'Download has started!',"suc");
         client.add(this.magnetUrlDown, function(torrent) {
           vm.hashDown = `Hash:${torrent.infoHash}`;
           var file = torrent.files[0];
@@ -69,7 +70,8 @@ var app = new Vue({
     },
   },
 })
+
 setInterval(function() {
   app.downSpeed = client.downloadSpeed;
   app.upSpeed = client.uploadSpeed;
-},1000);
+},500);
