@@ -1,5 +1,5 @@
 # lofiTorrent
-![lofiTorrent](logo.png)
+![lofiTorrent](img/logo.png)
 
 Open source browser torrent client
 
