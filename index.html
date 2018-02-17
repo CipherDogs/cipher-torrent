@@ -13,7 +13,7 @@
   <div class="header">
     <div class="left">
       <a href="index.html">
-        <h1 class="title"><i class="ion-ios-infinite-outline"></i>&nbsp;lofiTorrent</h1>
+        <h1 class="title">lofiTorrent&nbsp;<i class="ion-ios-infinite-outline"></i></h1>
       </a>
     </div>
     <div class="right">
@@ -39,7 +39,7 @@
       [Up&nbsp;<i class="ion-ios-arrow-thin-up"></i>{{upSpeed/1000}}&nbsp;kB/sec]&nbsp;[Down&nbsp;<i class="ion-ios-arrow-thin-down"></i>{{downSpeed/1000}}&nbsp;kB/sec]
     </div>
     <div class="blocks" v-show="main" style="display: none;">
-      <div class="block">
+      <div class="block" style="left:0;">
         <div class="block-head">Seeding</div>
         <div class="block-body">
           <div v-if="UpVis">
@@ -51,7 +51,7 @@
           </div>
         </div>
       </div>
-      <div class="block">
+      <div class="block" style="right:0;">
         <div class="block-head">Downloading</div>
         <div class="block-body" >
           <div v-if="DownVis">
