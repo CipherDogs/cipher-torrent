@@ -8,11 +8,12 @@ a, a:visited, a:active, a:hover{
 			}
 i{
     margin-right:5px;
+    font-size:25px;
 }
-#preloaders, .header, .panel, .speed, .blocks, .block, .alert, .footer{
+#preloaders, .header, .panel, .speed, .blocks, .block, .down-btn, .alert, .footer{
     display: flex;
 }
-#preloaders, .header, .panel, .speed, .blocks, .alert, .footer{
+#preloaders, .header, .panel, .speed, .blocks, .down-btn, .alert, .footer{
     flex-direction: row;
 }
 .block, .block-body{
@@ -28,6 +29,9 @@ i{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+.title i{
+    font-size:40px;
+}
 #preloaders {
     margin: 0;
 }
@@ -38,16 +42,24 @@ i{
     padding-top: 10px;
 }
 .left, .right{
+    display:flex;
+    flex-direction:row;
     margin-left: 15px;
     margin-right: 15px;
 }
 .btn{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
     background-color: #fff;
     font-size: 14px;
     padding: 5px 12px;
     border: 1px solid transparent;
     border-radius: 4px;
     border-color: #ccc;
+    width:90px;
+    height:25px;
 }
 .ipt{
     border: 1px solid transparent;
