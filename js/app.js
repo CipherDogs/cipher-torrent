@@ -1,35 +1,20 @@
-let client = new WebTorrent();
-
-function visAlert(vm,stat,col) {
-    vm.status = stat;
-    if(col == "war"){
-	vm.statusVisWar = true;
-	function visF(){
-	    vm.statusVisWar = false;
-	}
-	setTimeout(visF, 2000);
-    }else if(col == "suc"){
-	vm.statusVisSuc = true;
-	function visF(){
-	    vm.statusVisSuc = false;
-	}
-	setTimeout(visF, 2000);
-    }
-}
+let client = new WebTorrent()
 
 let app = new Vue({
 		      el: '#main',
 		      data:{
 			  main: true,
 			  loader: false,
-			  status: '',
+			  notification: {
+			      message: '',
+			      warning: false,
+			      success: false,
+			  },
 			  magnetUrlDown: '',
 			  speed: {
 			      up: 0,
 			      down: 0,
 			  },
-			  statusVisSuc: false,
-			  statusVisWar: false,
 			  UpVis: false,
 			  DownVis: false,
 		      },
@@ -40,12 +25,27 @@ let app = new Vue({
 					  vm.speed.up = client.uploadSpeed
 				      },500)
 		      },
+		      watch:{
+			  'notification.success': function(){
+			      let vm = this
+			      if(this.notification.success === true){
+				  setTimeout(function(){vm.notification.success = false},2000)
+			      }
+			  },
+			  'notification.warning': function(){
+			      let vm = this
+			      if(this.notification.warning === true){
+				  setTimeout(function(){vm.notification.warning = false},2000)
+			      }
+			  }
+		      },
 		      methods:{
 			  upload: function(event) {
-			      let vm = this;
-			      let file = event.target.files[0];
+			      let vm = this
+			      let file = event.target.files[0]
 			      if(file != null){
-				  visAlert(vm,'The distribution began!',"suc");
+				  vm.notification.message = 'The distribution began!'
+				  vm.notification.success = true
 				  client.seed(file, function (torrent) {
 						  vm.fileNameUp = file.name;
 						  vm.fileNameTDown = `${file.name}.torrent`;
@@ -55,13 +55,15 @@ let app = new Vue({
 						  vm.UpVis = true;
 					      })
 			      }else{
-				  visAlert(vm,'File not found',"war");
+				  vm.notification.message = 'File not found'
+				  vm.notification.warning = true
 			      }
 			  },
 			  download:function() {
 			      let vm = this;
 			      if((this.magnetUrlDown != null) && this.magnetUrlDown.length > 0){
-				  visAlert(vm,'Download has started!',"suc");
+				  vm.notification.message = 'Download has started!'
+				  vm.notification.success = true
 				  client.add(this.magnetUrlDown, function(torrent) {
 						 vm.hashDown = `Hash:${torrent.infoHash}`;
 						 var file = torrent.files[0];
@@ -70,11 +72,13 @@ let app = new Vue({
 								     if (err) throw err
 								     vm.fileUrlDown = url;
 								     vm.DownVis = true;
-								     visAlert(vm,'Loading is complete!',"suc");
+								     vm.notification.message = 'Loading is complete!'
+								     vm.notification.success = true
 								 })
 					     })
 			      }else{
-				  visAlert(vm,'Add a magnet link',"war");
+				  vm.notification.message = 'Add a magnet link'
+				  vm.notification.warning = true
 			      }
 			  },
 		      },

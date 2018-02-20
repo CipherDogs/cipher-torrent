@@ -60,10 +60,7 @@
         </div>
       </div>
     </div>
-    <div v-show="main" style="display: none;">
-      <div class="alert alert-success" role="alert" v-show="statusVisSuc">{{status}}</div>
-      <div class="alert alert-warning" role="alert" v-show="statusVisWar">{{status}}</div>
-    </div>
+    <notice :main="main" :notification="notification"></notice>
   </div>
   <div class="footer">
     <div class="left">
@@ -80,6 +77,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/webtorrent/latest/webtorrent.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
   <script type="text/javascript" src="js/speed.js"></script>
+  <script type="text/javascript" src="js/notice.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
