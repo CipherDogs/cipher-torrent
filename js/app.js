@@ -22,7 +22,14 @@ let app = new Vue({
 			      name: '',
 			      url: '',
 			  },
-			  UpVis: false,
+			  up: {
+			      visible: false,
+			      name: '',
+			      torrent: '',
+			      magnet: '',
+			      hash: '',
+			      blob: '',
+			  },
 		      },
 		      mounted: function(){
 			  let vm = this
@@ -53,12 +60,12 @@ let app = new Vue({
 				  vm.notification.message = 'The distribution began!'
 				  vm.notification.success = true
 				  client.seed(file, function (torrent) {
-						  vm.fileNameUp = file.name;
-						  vm.fileNameTDown = `${file.name}.torrent`
-						  vm.magnetUp = torrent.magnetURI
-						  vm.hashUp = torrent.infoHash
-						  vm.torrentFileUp = torrent.torrentFileBlobURL
-						  vm.UpVis = true
+						  vm.up.name = file.name;
+						  vm.up.torrent = `${file.name}.torrent`
+						  vm.up.magnet = torrent.magnetURI
+						  vm.up.hash = torrent.infoHash
+						  vm.up.blob = torrent.torrentFileBlobURL
+						  vm.up.visible = true
 					      })
 			      }else{
 				  vm.notification.message = 'File not found'
