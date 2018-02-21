@@ -23,7 +23,6 @@ let app = new Vue({
 			      url: '',
 			  },
 			  UpVis: false,
-			  DownVis: false,
 		      },
 		      mounted: function(){
 			  let vm = this
@@ -55,11 +54,11 @@ let app = new Vue({
 				  vm.notification.success = true
 				  client.seed(file, function (torrent) {
 						  vm.fileNameUp = file.name;
-						  vm.fileNameTDown = `${file.name}.torrent`;
-						  vm.magnetUp = torrent.magnetURI;
-						  vm.hashUp = torrent.infoHash;
-						  vm.torrentFileUp = torrent.torrentFileBlobURL;
-						  vm.UpVis = true;
+						  vm.fileNameTDown = `${file.name}.torrent`
+						  vm.magnetUp = torrent.magnetURI
+						  vm.hashUp = torrent.infoHash
+						  vm.torrentFileUp = torrent.torrentFileBlobURL
+						  vm.UpVis = true
 					      })
 			      }else{
 				  vm.notification.message = 'File not found'
@@ -67,19 +66,19 @@ let app = new Vue({
 			      }
 			  },
 			  download:function() {
-			      let vm = this;
+			      let vm = this
 			      if((this.magnetUrlDown != null) && this.magnetUrlDown.length > 0){
 				  vm.notification.message = 'Download has started!'
 				  vm.notification.success = true
 				  client.add(this.magnetUrlDown, function(torrent) {
-						 vm.down.hash = torrent.infoHash;
-						 var file = torrent.files[0];
-						 vm.down.name = file.name;
-						 vm.down.length = file.length/1000/1000;
+						 vm.down.hash = torrent.infoHash
+						 var file = torrent.files[0]
+						 vm.down.name = file.name
+						 vm.down.length = file.length/1000/1000
 						 file.getBlobURL(function(err, url) {
 								     if (err) throw err
-								     vm.down.url = url;
-								     vm.down.visible = true;
+								     vm.down.url = url
+								     vm.down.visible = true
 								     vm.notification.message = 'Loading is complete!'
 								     vm.notification.success = true
 								 })
