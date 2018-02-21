@@ -50,7 +50,7 @@ let app = new Vue({
 						  vm.fileNameUp = file.name;
 						  vm.fileNameTDown = `${file.name}.torrent`;
 						  vm.magnetUp = torrent.magnetURI;
-						  vm.hashUp = `Hash:${torrent.infoHash}`;
+						  vm.hashUp = torrent.infoHash;
 						  vm.torrentFileUp = torrent.torrentFileBlobURL;
 						  vm.UpVis = true;
 					      })
@@ -65,7 +65,7 @@ let app = new Vue({
 				  vm.notification.message = 'Download has started!'
 				  vm.notification.success = true
 				  client.add(this.magnetUrlDown, function(torrent) {
-						 vm.hashDown = `Hash:${torrent.infoHash}`;
+						 vm.hashDown = torrent.infoHash;
 						 var file = torrent.files[0];
 						 vm.fileNameDown = file.name;
 						 file.getBlobURL(function(err, url) {

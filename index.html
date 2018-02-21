@@ -42,7 +42,7 @@
         <div class="block-body">
           <div v-if="UpVis">
             <p>File name:{{fileNameUp}}</p>
-            <p>{{hashUp}}</p>
+            <p>Hash:{{hashUp}}</p>
             <br>
 	    <div class="down-btn">
 	      <a :href="magnetUp">
@@ -59,8 +59,8 @@
         <div class="block-head">Downloading</div>
         <div class="block-body" >
           <div v-if="DownVis">
-            <p>{{fileNameDown}}</p>
-            <p>{{hashDown}}</p>
+            <p>File name:{{fileNameDown}}</p>
+            <p>Hash:{{hashDown}}</p>
             <br>
             <p><a :href="fileUrlDown" :download="fileNameDown">
 		<label class="btn"><i class="ion-ios-copy-outline"></i>Get file</label>
