@@ -46,7 +46,7 @@
             <br>
 	    <div class="down-btn">
 	      <a :href="magnetUp">
-		<label class="btn"><i class="ion-ios-world-outline"></i>Magnet link</label>
+		<label class="btn"><i class="ion-ios-world-outline"></i>Magnet</label>
 	      </a>
               <a :href="torrentFileUp" :download="fileNameTDown">
 		<label class="btn"><i class="ion-ios-copy-outline"></i>Torrent file</label>
@@ -62,7 +62,9 @@
             <p>{{fileNameDown}}</p>
             <p>{{hashDown}}</p>
             <br>
-            <p><a :href="fileUrlDown" :download="fileNameDown">[Download {{fileNameDown}}]</a></p>
+            <p><a :href="fileUrlDown" :download="fileNameDown">
+		<label class="btn"><i class="ion-ios-copy-outline"></i>Get file</label>
+	    </a></p>
           </div>
         </div>
       </div>
