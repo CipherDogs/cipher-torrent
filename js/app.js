@@ -15,6 +15,9 @@ let app = new Vue({
 			      up: 0,
 			      down: 0,
 			  },
+			  down: {
+			      length: 0,
+			  },
 			  UpVis: false,
 			  DownVis: false,
 		      },
@@ -68,6 +71,7 @@ let app = new Vue({
 						 vm.hashDown = torrent.infoHash;
 						 var file = torrent.files[0];
 						 vm.fileNameDown = file.name;
+						 vm.down.length = file.length/1000/1000;
 						 file.getBlobURL(function(err, url) {
 								     if (err) throw err
 								     vm.fileUrlDown = url;

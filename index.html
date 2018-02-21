@@ -61,6 +61,7 @@
           <div v-if="DownVis">
             <p>File name:{{fileNameDown}}</p>
             <p>Hash:{{hashDown}}</p>
+	    <p>Size:{{down.length}}MB</p>
             <br>
             <p><a :href="fileUrlDown" :download="fileNameDown">
 		<label class="btn"><i class="ion-ios-copy-outline"></i>Get file</label>
