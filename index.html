@@ -37,24 +37,7 @@
     </div>
     <speed :main="main" :speed="speed"></speed>
     <div class="blocks" v-show="main" style="display: none;">
-      <div class="block" style="left:0;">
-        <div class="block-head">Seeding</div>
-        <div class="block-body">
-          <div v-if="up.visible">
-            <p>File name:{{up.name}}</p>
-            <p>Hash:{{up.hash}}</p>
-            <br>
-	    <div class="down-btn">
-	      <a :href="up.magnet">
-		<label class="btn"><i class="ion-ios-world-outline"></i>Magnet</label>
-	      </a>
-              <a :href="up.blob" :download="up.name">
-		<label class="btn"><i class="ion-ios-copy-outline"></i>Torrent file</label>
-	      </a>
-	    </div>
-          </div>
-        </div>
-      </div>
+      <upload :up="up"></upload>
       <download :down="down"></download>
     </div>
     <notice :main="main" :notification="notification"></notice>
@@ -76,6 +59,7 @@
   <script type="text/javascript" src="js/speed.js"></script>
   <script type="text/javascript" src="js/notice.js"></script>
   <script type="text/javascript" src="js/download.js"></script>
+  <script type="text/javascript" src="js/upload.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
