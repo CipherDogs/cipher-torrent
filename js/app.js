@@ -2,6 +2,7 @@ let client = new WebTorrent()
 
 let app = new Vue({
 		      el: '#main',
+		      i18n: myLocal,
 		      data:{
 			  main: true,
 			  loader: false,
