@@ -16,8 +16,10 @@ const local = {
 	text: {
 	    file: 'File name',
 	    hash: 'Hash',
-	    size: 'Size'
-	}
+	    size: 'Size',
+	    magnet: 'Magnet Link'
+	},
+	speed: 'kB/sec'
     },
     ru: {
 	btn: {
@@ -34,8 +36,10 @@ const local = {
 	text: {
 	    file: 'Имя файла',
 	    hash: 'Хэш',
-	    size: 'Размер'
-	}
+	    size: 'Размер',
+	    magnet: 'Magnet ссылка'
+	},
+	speed: 'кБ/сек'
     }
 }
 
