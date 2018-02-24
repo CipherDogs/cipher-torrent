@@ -5,6 +5,6 @@ Vue.component('headline', {
 		      '<h1 class="title">lofiTorrent&nbsp;<i class="ion-ios-infinite-outline"></i></h1>' +
 		      '</a>' +
 		      '</div>' +
-		      '<div class="right">Online and offline browser torrent client</div>' +
+		      '<div class="right">{{ $t("title.head") }}</div>' +
 		      '</div>'
 	      })

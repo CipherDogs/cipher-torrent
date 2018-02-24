@@ -10,6 +10,7 @@ const local = {
 	    file: 'Get file'
 	},
 	title: {
+	    head: 'Online and offline browser torrent client',
 	    seed: 'Seeding',
 	    down: 'Downloading'
 	},
@@ -30,6 +31,7 @@ const local = {
 	    file: 'Получить файл'
 	},
 	title: {
+	    head: 'Онлайн и оффлайн браузерный торрент клиент',
 	    seed: 'Раздача',
 	    down: 'Скачивание'
 	},
