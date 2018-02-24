@@ -28,11 +28,11 @@
     <div class="panel" v-show="main" style="display: none;">
       <div class="left">
         <input id="file-upload" type="file" @change="upload($event)">
-        <label class="btn" for="file-upload"><i class="ion-android-upload"></i>Seed File</label>
+        <label class="btn" for="file-upload"><i class="ion-android-upload"></i>{{ $t("btn.seed") }}</label>
       </div>
       <div class="right">
-        <input class="ipt" type="text" placeholder="Magnet URL" v-model="magnetUrlDown">
-        <label class="btn" @click="download"><i class="ion-android-download"></i>Download</label>
+        <input class="ipt" type="text" :placeholder="$t('text.magnet')" v-model="magnetUrlDown">
+        <label class="btn" @click="download"><i class="ion-android-download"></i>{{ $t("btn.down") }}</label>
       </div>
     </div>
     <speed :main="main" :speed="speed"></speed>
