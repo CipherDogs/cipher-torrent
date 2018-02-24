@@ -11,17 +11,8 @@
   <title>lofiTorrent - Browser torrent client</title>
 </head>
 <body>
-  <div class="header">
-    <div class="left">
-      <a href="index.html">
-        <h1 class="title">lofiTorrent&nbsp;<i class="ion-ios-infinite-outline"></i></h1>
-      </a>
-    </div>
-    <div class="right">
-      Online and offline browser torrent client
-    </div>
-  </div>
   <div id="main">
+    <headline></headline>
     <div id="preloaders" v-if="loader">
       <img src="img/preloader.gif">
     </div>
@@ -57,6 +48,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/webtorrent/latest/webtorrent.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
   <script type="text/javascript" src="https://unpkg.com/vue-i18n/dist/vue-i18n"></script>
+  <script type="text/javascript" src="template/header.js"></script>
   <script type="text/javascript" src="template/speed.js"></script>
   <script type="text/javascript" src="template/notice.js"></script>
   <script type="text/javascript" src="template/download.js"></script>
