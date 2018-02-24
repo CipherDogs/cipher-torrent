@@ -54,6 +54,14 @@ let app = new Vue({
 			  }
 		      },
 		      methods:{
+			  switchLang: function(lang){
+			      if (lang in this.$i18n.messages) {
+				  this.$i18n.locale = lang
+			      } else {
+				  vm.notification.message = 'Language not found!'
+				  vm.notification.warning = true
+			      }
+			  },
 			  upload: function(event) {
 			      let vm = this
 			      let file = event.target.files[0]

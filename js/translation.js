@@ -46,6 +46,6 @@ const local = {
 }
 
 const myLocal = new VueI18n({
-				locale: 'ru',
+				locale: 'en',
 				messages: local,
 			    })

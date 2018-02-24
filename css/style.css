@@ -35,6 +35,10 @@ i{
 #preloaders {
     margin: 0;
 }
+.lang label:hover{
+    text-decoration:underline;
+    cursor:pointer;
+}
 .header, .panel, .speed, .blocks, .footer{
     align-items: center;
 }
