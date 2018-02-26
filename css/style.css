@@ -123,15 +123,16 @@ i{
     padding-bottom: 15px;
     top: 10px;
     right: 10px;
-    border-radius:10px 10px;
     z-index: 1;
     color:white;
 }
 .alert-success{
-    background-color: rgba(62,191,50,0.9);
+    background-color: #4bc80c;
+    border-left: 3px solid #2f7d07;
 }
 .alert-warning{
-    background-color: rgba(239,206,25,0.9);
+    background-color: #f4d30f;
+    border-left: 3px solid #fd9900;
 }
 #file-upload{
     display: none;
