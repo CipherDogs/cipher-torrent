@@ -35,10 +35,6 @@ i{
 #preloaders {
     margin: 0;
 }
-.lang label:hover{
-    text-decoration:underline;
-    cursor:pointer;
-}
 .header, .panel, .speed, .blocks, .footer{
     align-items: center;
 }
@@ -113,8 +109,10 @@ i{
 }
 .footer img{
     padding-top: 5px;
-    width: 20px;
     height: 20px;
+}
+.footer img:hover{
+    cursor:pointer;
 }
 .alert{
     position: absolute;

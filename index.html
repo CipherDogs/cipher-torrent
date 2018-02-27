@@ -34,9 +34,8 @@
     <notice :main="main" :notification="notification"></notice>
     <footline>
       <div class="lang">
-	Lang:
-	<label @click="switchLang('ru')">ru</label>
-	<label @click="switchLang('en')">en</label>
+	<img @click="switchLang('ru')" src="img/ru.png" class="lang-ru" alt="ru">
+	<img @click="switchLang('en')" src="img/en.png" class="lang-en" alt="en">
       </div>
     </footline>
   </div>
