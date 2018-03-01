@@ -1,6 +1,7 @@
 body{
     margin: 0 20px;
-    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 a, a:visited, a:active, a:hover{
 			    text-decoration:none;
@@ -26,6 +27,7 @@ i{
     justify-content: space-between;
 }
 .title{
+    font-weight: 100;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -46,6 +48,7 @@ i{
     flex-direction:row;
     margin-left: 15px;
     margin-right: 15px;
+    font-weight: 300;
 }
 .btn{
     display:flex;
@@ -61,6 +64,7 @@ i{
     width:90px;
     height:25px;
     margin: 0 5px;
+    font-weight: 300;
 }
 .ipt{
     border: 1px solid transparent;
@@ -89,6 +93,7 @@ i{
     background-color: hsl(210,9%,94%);
     text-align: center;
     padding: 5px;
+    font-weight: 300;
 }
 .block-body{
     padding: 10px;
