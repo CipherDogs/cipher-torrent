@@ -7,6 +7,7 @@ Vue.component('download', {
 		      '<p>{{ $t("text.hash") }}:{{down.hash}}</p>' +
 		      '<p>{{ $t("text.size") }}:{{down.length}}MB</p>' +
 		      '<br>' +
+		      '<p v-if="down.process.visible" class="process">In the process</p>' +
 		      '<p v-if="down.btns.visible"><a :href="down.url" :download="down.name">' +
 		      '<label class="btn"><i class="ion-ios-copy-outline"></i>{{ $t("btn.file") }}</label>' +
 		      '</a></p>' +

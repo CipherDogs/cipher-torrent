@@ -23,7 +23,10 @@ let app = new Vue({
 			      name: '',
 			      url: '',
 			      btns: {
-				  visible: false,
+				  visible: false
+			      },
+			      process: {
+				  visible:true
 			      }
 			  },
 			  up: {
@@ -87,9 +90,9 @@ let app = new Vue({
 			  download:function() {
 			      let vm = this
 			      if((this.magnetUrlDown != null) && this.magnetUrlDown.length > 0){
+				  vm.notification.message = 'Download has started!'
+				  vm.notification.success = true
 				  client.add(this.magnetUrlDown, function(torrent) {
-						 vm.notification.message = 'Download has started!'
-						 vm.notification.success = true
 						 vm.down.hash = torrent.infoHash
 						 var file = torrent.files[0]
 						 vm.down.name = file.name
@@ -97,6 +100,7 @@ let app = new Vue({
 						 vm.down.visible = true
 						 file.getBlobURL(function(err, url) {
 								     if (err) throw err
+								     vm.down.process.visible = false
 								     vm.down.url = url
 								     vm.down.btns.visible = true
 								     vm.notification.message = 'Loading is complete!'
