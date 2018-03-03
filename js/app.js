@@ -25,6 +25,7 @@ let app = new Vue({
 			      btns: {
 				  visible: false
 			      },
+			      progress: 0,
 			      process: {
 				  visible:true
 			      }
@@ -43,6 +44,7 @@ let app = new Vue({
 			  setInterval(function() {
 					  vm.speed.down = client.downloadSpeed
 					  vm.speed.up = client.uploadSpeed
+					  vm.down.progress = client.progress*100
 				      },500)
 		      },
 		      watch:{
