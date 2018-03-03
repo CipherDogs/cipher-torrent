@@ -42,9 +42,9 @@ let app = new Vue({
 		      mounted: function(){
 			  let vm = this
 			  setInterval(function() {
-					  vm.speed.down = client.downloadSpeed
-					  vm.speed.up = client.uploadSpeed
-					  vm.down.progress = client.progress*100
+					  vm.speed.down = Number(client.downloadSpeed/1000).toFixed(2)
+					  vm.speed.up = Number(client.uploadSpeed/1000).toFixed(2)
+					  vm.down.progress = Math.round(client.progress*100)
 				      },500)
 		      },
 		      watch:{
@@ -98,7 +98,7 @@ let app = new Vue({
 						 vm.down.hash = torrent.infoHash
 						 var file = torrent.files[0]
 						 vm.down.name = file.name
-						 vm.down.length = file.length/1000/1000
+						 vm.down.length = Number(file.length/1000/1000).toFixed(2)
 						 vm.down.visible = true
 						 file.getBlobURL(function(err, url) {
 								     if (err) throw err
