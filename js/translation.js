@@ -18,7 +18,7 @@ const local = {
 	    file: 'File name',
 	    hash: 'Hash',
 	    size: 'Size',
-	    magnet: 'Magnet Link'
+	    magnet: 'Magnet Link, info hash or http/https url .torrent'
 	},
 	speed: 'kB/sec'
     },
@@ -39,7 +39,7 @@ const local = {
 	    file: 'Имя файла',
 	    hash: 'Хэш',
 	    size: 'Размер',
-	    magnet: 'Magnet ссылка'
+	    magnet: 'Magnet ссылка, хэш или ссылка на торрент файл'
 	},
 	speed: 'кБ/сек'
     }
