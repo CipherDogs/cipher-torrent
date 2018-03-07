@@ -11,6 +11,17 @@ i{
     margin-right:5px;
     font-size:25px;
 }
+table{
+    margin: 5px;
+    border-spacing: 0 5px;
+}
+td{
+    border: 2px solid hsl(210,9%,94%);
+    padding: 5px;
+}
+.td-name{
+    background-color: hsl(210,9%,94%);
+}
 #preloaders, .header, .panel, .speed, .blocks, .block, .down-btn, .alert, .footer{
     display: flex;
 }

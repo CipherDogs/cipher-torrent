@@ -3,9 +3,10 @@ Vue.component('upload', {
 		      '<div class="block-head">{{ $t("title.seed") }}</div>' +
 		      '<div class="block-body">' +
 		      '<div v-if="up.visible">' +
-		      '<p>{{ $t("text.file") }}:{{up.name}}</p>' +
-		      '<p>{{ $t("text.hash") }}:{{up.hash}}</p>' +
-		      '<br>' +
+		      '<table>' +
+		      '<tr><td class="td-name">{{ $t("text.file") }}</td><td>{{up.name}}</td></tr>' +
+		      '<tr><td class="td-name">{{ $t("text.hash") }}</td><td>{{up.hash}}</td></tr>' +
+		      '</table>' +
 		      '<div class="down-btn">' +
 		      '<a :href="up.magnet">' +
 		      '<label class="btn"><i class="ion-ios-world-outline"></i>{{ $t("btn.magnet") }}</label>' +
