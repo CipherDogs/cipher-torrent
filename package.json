@@ -1,0 +1,20 @@
+{
+  "name": "lofitorrent",
+  "version": "1.5.0",
+  "description": "Browser torrent client",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deadblackclover/lofiTorrent.git"
+  },
+  "keywords": [
+    "webtorrent",
+    "torrent",
+    "browser"
+  ],
+  "author": "DEADBLACKCLOVER",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/deadblackclover/lofiTorrent/issues"
+  },
+  "homepage": "http://lofitorrent.js.org"
+}
