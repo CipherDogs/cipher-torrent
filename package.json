@@ -2,6 +2,9 @@
   "name": "lofitorrent",
   "version": "1.5.0",
   "description": "Browser torrent client",
+  "scripts": {
+    "standart": "standart --fix"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deadblackclover/lofiTorrent.git"
@@ -16,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/deadblackclover/lofiTorrent/issues"
   },
-  "homepage": "http://lofitorrent.js.org"
+  "homepage": "http://lofitorrent.js.org",
+  "devDependencies": {
+    "standart": "^6.1.0"
+  }
 }
