@@ -1,4 +1,4 @@
-const local = {
+export default {
   en: {
     btn: {
       seed: 'Seed File',
