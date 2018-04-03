@@ -1,3 +1,14 @@
+import Vue from 'vue'
+import WebTorrent from 'webtorrent/webtorrent.min'
+import myLocal from '../js/translation'
+
+import download from '../template/download.vue'
+import footline from '../template/footer.vue'
+import headline from '../template/header.vue'
+import notice from '../template/notice.vue'
+import speed from '../template/speed.vue'
+import upload from '../template/upload.vue'
+
 let client = new WebTorrent()
 
 let app = new Vue({
@@ -38,6 +49,14 @@ let app = new Vue({
       hash: '',
       blob: ''
     }
+  },
+  components: {
+    download,
+    footline,
+    headline,
+    notice,
+    speed,
+    upload
   },
   mounted: function() {
     let vm = this
