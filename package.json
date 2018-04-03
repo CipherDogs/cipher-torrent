@@ -22,8 +22,14 @@
   },
   "homepage": "http://lofitorrent.js.org",
   "devDependencies": {
+    "babel-loader": "^7.1.4",
     "standart": "^6.1.0",
+    "vue": "^2.5.16",
+    "vue-i18n": "^7.6.0",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
     "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.13"
+    "webpack-cli": "^2.0.13",
+    "webtorrent": "^0.98.24"
   }
 }
