@@ -3,7 +3,8 @@
   "version": "1.5.0",
   "description": "Browser torrent client",
   "scripts": {
-    "standart": "standart --fix"
+    "standart": "standart --fix",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
   },
   "homepage": "http://lofitorrent.js.org",
   "devDependencies": {
-    "standart": "^6.1.0"
+    "standart": "^6.1.0",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
   }
 }
