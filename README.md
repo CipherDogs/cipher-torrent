@@ -9,13 +9,13 @@ Open source browser torrent client
 * Vue.js
 * WebTorrent
 
-## Changelog
-* `v 1.5.0` - Add Math round for speed and download progress
-* `v 1.4.0` - New design
-* `v 1.3.0` - Add russia and english lang
-* `v 1.2.0` - Templates and fixed
-* `v 1.1.0` - New design
-* `v 1.0.0` - Initial Release
+## Build
+For assembly is used webpack. To run the assembly, run the command.
+
+```bash
+npm run webpack 
+```
+
 
 ## Help project
 If you can fix and help, then please download, fork and commit my project.
