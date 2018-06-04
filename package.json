@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deadblackclover/lofiTorrent.git"
+    "url": "git+https://bitbucket.org/lofitorrent/lofitorrent.bitbucket.io.git"
   },
   "keywords": [
     "webtorrent",
@@ -18,9 +18,9 @@
   "author": "DEADBLACKCLOVER",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/deadblackclover/lofiTorrent/issues"
+    "url": "https://bitbucket.org/lofitorrent/lofitorrent.bitbucket.io/issues"
   },
-  "homepage": "http://lofitorrent.js.org",
+  "homepage": "https://lofitorrent.bitbucket.io/",
   "devDependencies": {
     "babel-loader": "^7.1.4",
     "standart": "^6.1.0",
