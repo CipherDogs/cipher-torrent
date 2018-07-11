@@ -11,34 +11,7 @@
   <title>lofiTorrent - Browser torrent client</title>
 </head>
 <body>
-  <div id="main">
-    <headline></headline>
-    <div id="preloaders" v-if="loader">
-      <img src="img/preloader.gif">
-    </div>
-    <div class="panel" v-show="main" style="display: none;">
-      <div class="left">
-        <input id="file-upload" type="file" @change="upload($event)">
-        <label class="btn" for="file-upload"><i class="ion-android-upload"></i>{{ $t("btn.seed") }}</label>
-      </div>
-      <div class="right">
-        <input class="ipt" type="text" :placeholder="$t('text.magnet')" v-model="magnetUrlDown">
-        <label class="btn" @click="download"><i class="ion-android-download"></i>{{ $t("btn.down") }}</label>
-      </div>
-    </div>
-    <speed :main="main" :speed="speed"></speed>
-    <div class="blocks" v-show="main" style="display: none;">
-      <upload :up="up"></upload>
-      <download :down="down"></download>
-    </div>
-    <notice :main="main" :notification="notification"></notice>
-    <footline>
-      <div class="lang">
-	<img @click="switchLang('ru')" src="img/ru.png" class="lang-ru" alt="ru">
-	<img @click="switchLang('en')" src="img/en.png" class="lang-en" alt="en">
-      </div>
-    </footline>
-  </div>
+  <div id="app"></div>
   <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
 </html>
