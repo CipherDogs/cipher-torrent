@@ -22,10 +22,10 @@
         },
         i18n: myLocal,
         mounted: function() {
-            let vm = this
+            let _this = this
             setInterval(function() {
-                vm.speed.down = Number(client.downloadSpeed / 1000).toFixed(2)
-                vm.speed.up = Number(client.uploadSpeed / 1000).toFixed(2)
+                _this.speed.down = Number(client.downloadSpeed / 1000).toFixed(2)
+                _this.speed.up = Number(client.uploadSpeed / 1000).toFixed(2)
             }, 500)
         }
     }

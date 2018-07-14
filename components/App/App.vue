@@ -4,11 +4,11 @@
     </div>
     <div class="main" v-else>
         <headline></headline>
-        <panel></panel>
+        <panel @upload="onUpload" @download="onDownload"></panel>
         <speed></speed>
         <div class="blocks">
-            <upload></upload>
-            <download></download>
+            <upload :up="up"></upload>
+            <download :down="down"></download>
         </div>
         <notice></notice>
         <footline></footline>
@@ -25,8 +25,12 @@ import notice from '../Notice/Notice.vue'
 import footline from '../Footer/Footer.vue'
 
 export default {
-    data: {
-        loader: false
+    data() {
+        return {
+            loader: true,
+            up: {},
+            down: {}
+        }
     },
     components: {
         headline,
@@ -36,6 +40,17 @@ export default {
         download,
         notice,
         footline
+    },
+    mounted: function () {
+        this.loader = false
+    },
+    methods: {
+        onUpload: function(data) {
+            this.up = data
+        },
+        onDownload: function(data) {
+            this.down = data
+        }
     }
 }
 </script>
