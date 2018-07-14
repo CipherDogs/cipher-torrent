@@ -4,13 +4,13 @@
     </div>
     <div class="main" v-else>
         <headline></headline>
-        <panel @upload="onUpload" @download="onDownload"></panel>
+        <panel @upload="onUpload" @download="onDownload" @nSuccess="nSuccess" @nWarning="nWarning"></panel>
         <speed></speed>
         <div class="blocks">
             <upload :up="up"></upload>
             <download :down="down"></download>
         </div>
-        <notice></notice>
+        <notice :notification="notification"></notice>
         <footline></footline>
     </div>
 </template>
@@ -29,7 +29,12 @@ export default {
         return {
             loader: true,
             up: {},
-            down: {}
+            down: {},
+            notification: {
+                message: '',
+                warning: false,
+                success: false
+            },
         }
     },
     components: {
@@ -50,6 +55,14 @@ export default {
         },
         onDownload: function(data) {
             this.down = data
+        },
+        nSuccess: function(text) {
+            this.notification.message = text
+            this.notification.success = true
+        },
+        nWarning: function(text) {
+            this.notification.message = text
+            this.notification.warning = true
         }
     }
 }
