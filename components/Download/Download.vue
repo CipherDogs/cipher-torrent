@@ -25,6 +25,12 @@
     
     export default{
         i18n: myLocal,
-        props: ['down']
+        props: ['down'],
+        mounted: function() {
+            let _this = this
+            setInterval(function() {
+                _this.down.progress = Math.round(client.progress * 100)
+            }, 500)
+        },
     }
 </script>
