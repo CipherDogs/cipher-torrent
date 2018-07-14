@@ -26,9 +26,6 @@
             switchLang: function(lang) {
                 if (lang in this.$i18n.messages) {
                     this.$i18n.locale = lang
-                } else {
-                    //this.notification.message = 'Language not found!'
-                    //this.notification.warning = true
                 }
             }
         }
