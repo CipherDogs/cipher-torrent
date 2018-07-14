@@ -4,8 +4,8 @@
             <a href="https://bitbucket.org/deadblackclover" target="_blank">DEADBLACKCLOVER</a>
         </div>
         <div class="lang">
-            <img @click="switchLang('ru')" src="img/ru.png" class="lang-ru" alt="ru">
-            <img @click="switchLang('en')" src="img/en.png" class="lang-en" alt="en">
+            <img @click="switchLang('ru')" src="assets/img/ru.png" class="lang-ru" alt="ru">
+            <img @click="switchLang('en')" src="assets/img/en.png" class="lang-en" alt="en">
         </div>
         <div class="right">
             <a href="https://webtorrent.io/" target="_blank">
