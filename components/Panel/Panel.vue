@@ -6,9 +6,23 @@
         </div>
         <div class="right">
             <input class="ipt" type="text" :placeholder="$t('text.magnet')" v-model="magnetUrlDown">
-            <label class="btn" @click="download"><i class="ion-android-download"></i>{{ $t("btn.down") }}</label>
+            <label class="btn" @click="download">
+                <i class="ion-android-download"></i>{{ $t("btn.down") }}
+            </label>
+            <label class="btn" @click="recently">
+                <i class="ion-android-stopwatch"></i>{{ $t("btn.recently") }}
+            </label>
+        </div>
+        <div class="recents" v-if="recents.visible">
+            <div class="recents-name">
+                {{ $t("title.recently") }}
+                <label class="btn" @click="recents.visible = false">
+                    <i class="ion-android-close"></i>{{ $t("btn.close") }}
+                </label>
             </div>
-        </div> 
+            <ul><li v-for="item in recents.recent">{{item}}</li></ul>
+        </div>
+    </div> 
 </template>
 
 <script>
@@ -40,7 +54,11 @@
                     hash: '',
                     blob: ''
                 },
-                magnetUrlDown: ''
+                magnetUrlDown: '',
+                recents: {
+                    visible: false,
+                    recent: []
+                }
             }
         },
         i18n: myLocal,
@@ -81,11 +99,20 @@
                             _this.down.btns.visible = true
                             _this.$emit('download', _this.down)
                             _this.$emit('nSuccess', 'Loading is complete!')
+                            window.localStorage[_this.down.hash] = _this.magnetUrlDown
+                            _this.magnetUrlDown = ''
                         })
                     })
                 } else {
                     _this.$emit('nWarning', 'Add a magnet link')
                 }
+            },
+            recently: function() {
+                this.recents.recent = []
+                for (let i = 0; i < window.localStorage.length; i++) {
+                    this.recents.recent.push(window.localStorage.getItem(window.localStorage.key(i)))
+                }
+                this.recents.visible = true
             }
         }
     }

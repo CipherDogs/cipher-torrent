@@ -26,12 +26,7 @@ td
 .td-name
   background-color hsl(210,9%,94%)
 
-.header
-  display flex
-  flex-direction row
-  justify-content space-between
-
-.panel
+.header, .panel, .recents-name
   display flex
   flex-direction row
   justify-content space-between
@@ -96,6 +91,18 @@ td
   padding 6.5px
   margin-right 10px
 
+.recents
+  position absolute
+  background white
+  box-shadow 0 0 5px gray
+  padding 10px
+  left 20px
+  right 20px
+  top 30px
+  bottom 30px
+  z-index 10
+  border-radius 10px
+  
 .blocks
   display flex
   flex-direction row

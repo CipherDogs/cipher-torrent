@@ -12,12 +12,15 @@ export default new VueI18n({
                 down: 'Download',
                 magnet: 'Magnet',
                 torrent: 'Torrent file',
-                file: 'Get file'
+                file: 'Get file',
+                close: 'Close',
+                recently: 'Recently'
             },
             title: {
                 head: 'Online and offline browser torrent client',
                 seed: 'Seeding',
-                down: 'Downloading'
+                down: 'Downloading',
+                recently: 'Recently'
             },
             text: {
                 file: 'File name',
@@ -33,12 +36,15 @@ export default new VueI18n({
                 down: 'Скачать',
                 magnet: 'Magnet',
                 torrent: 'Торрент файл',
-                file: 'Получить файл'
+                file: 'Получить файл',
+                close: 'Закрыть',
+                recently: 'Последние'
             },
             title: {
                 head: 'Онлайн и оффлайн браузерный торрент клиент',
                 seed: 'Раздача',
-                down: 'Скачивание'
+                down: 'Скачивание',
+                recently: 'Последние скачанное'
             },
             text: {
                 file: 'Имя файла',
