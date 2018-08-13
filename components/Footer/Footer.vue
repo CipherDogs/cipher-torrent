@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="footer">
         <div class="left">
-            <a href="https://bitbucket.org/deadblackclover" target="_blank">DEADBLACKCLOVER</a>
+            <a href="https://gitlab.com/deadblackclover" target="_blank">DEADBLACKCLOVER</a>
         </div>
         <div class="lang">
             <img @click="switchLang('ru')" src="assets/img/ru.png" class="lang-ru" alt="ru">

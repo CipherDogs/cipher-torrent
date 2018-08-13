@@ -1,6 +1,6 @@
 {
   "name": "lofitorrent",
-  "version": "1.6.0",
+  "version": "2.0.0",
   "description": "Browser torrent client",
   "scripts": {
     "standart": "standart --fix",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/lofitorrent/lofitorrent.bitbucket.io.git"
+    "url": "https://gitlab.com/deadblackclover/lofitorrent.git"
   },
   "keywords": [
     "webtorrent",
@@ -19,9 +19,9 @@
   "author": "DEADBLACKCLOVER",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://bitbucket.org/lofitorrent/lofitorrent.bitbucket.io/issues"
+    "url": "https://gitlab.com/deadblackclover/lofitorrent/issues"
   },
-  "homepage": "https://lofitorrent.bitbucket.io/",
+  "homepage": "https://deadblackclover.gitlab.io/lofitorrent/",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
