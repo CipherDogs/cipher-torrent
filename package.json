@@ -1,10 +1,11 @@
 {
   "name": "lofitorrent",
-  "version": "1.6.0",
+  "version": "2.0.0",
   "description": "Browser torrent client",
   "scripts": {
     "standart": "standart --fix",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -20,16 +21,21 @@
   "bugs": {
     "url": "https://gitlab.com/deadblackclover/lofitorrent/issues"
   },
-  "homepage": "https://deadblackclover.gitlab.io/lofitorrent",
+  "homepage": "https://deadblackclover.gitlab.io/lofitorrent/",
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "css-loader": "^1.0.0",
     "standart": "^6.1.0",
     "vue": "^2.5.16",
     "vue-i18n": "^7.6.0",
-    "vue-loader": "^14.2.2",
+    "vue-loader": "^15.2.4",
+    "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.4",
     "webtorrent": "^0.98.24"
   }
 }
