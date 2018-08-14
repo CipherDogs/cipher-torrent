@@ -3,6 +3,8 @@
 ![lofiTorrent](lofiTorrent.png)
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![License](https://img.shields.io/badge/license-GPL-brightgreen.svg)
+![Version](https://img.shields.io/badge/version-2.0.0-brightgreen.svg)
 
 Open source browser torrent client
 
