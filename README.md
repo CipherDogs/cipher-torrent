@@ -1,6 +1,6 @@
-# lofiTorrent
+# cipher-torrent
 
-![lofiTorrent](lofiTorrent.png)
+![cipher-torrent](lofiTorrent.png)
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ![License](https://img.shields.io/badge/license-GPL-brightgreen.svg)
