@@ -1,7 +1,7 @@
 <template>
     <div id="preloaders" v-if="loader">
         <img src="assets/img/preloader.gif">
-        <div>lofiTorrent loading</div>
+        <div>CipherTorrent loading</div>
     </div>
     <div class="main" v-else>
         <headline></headline>
