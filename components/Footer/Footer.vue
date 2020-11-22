@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="footer">
         <div class="left">
-            <a href="https://cipherdogs.net/" target="_blank">Cipher Dogs</a>
+            <a href="https://cipherdogs.net/" target="_blank">CipherDogs</a>
         </div>
         <div class="lang">
             <img @click="switchLang('ru')" src="assets/img/ru.png" class="lang-ru" alt="ru">
