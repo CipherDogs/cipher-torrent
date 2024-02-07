@@ -21,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/CipherDogs/cipher-torrent/issues"
   },
-  "homepage": "https://torrent.cipherdogs.net/",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
